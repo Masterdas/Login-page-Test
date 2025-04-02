@@ -1,0 +1,232 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #E9F1F9;
+        }
+
+        header {
+            background: #EAF5FD;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 393px;
+            height: auto;
+            align-items: center;
+            padding: 20px;
+            border: none;
+            gap: 10px;
+            margin: 0 auto;
+        }
+
+        .English {
+            background: #EAF5FD;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .profile-img {
+            margin-top: 90px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+
+        .container {
+            width: 100%;
+            margin-top: 40px;
+            background: #EAF5FD;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+
+        .container input {
+            padding: 20px;
+            height: 58px;
+            border-radius: 8px;
+            width: 100%;
+            background: white;
+            color: black;
+            font-size: 18px;
+            outline: none;
+            border: 2px solid #ddd;
+            margin-top: 4px;
+        }
+
+        .container input::placeholder {
+            color: transparent;
+        }
+
+        .container input:focus {
+            outline: 1px solid black;
+        }
+
+        .container label {
+            color: #555;
+            position: relative;
+            left: 1.4em;
+            top: -2.5em;
+            cursor: auto;
+            transition: 0.3s ease all;
+        }
+
+        input:focus ~ label,
+        input:not(:placeholder-shown) ~ label {
+            top: -4em;
+            color: #555;
+            font-size: 15px;
+        }
+
+        .container img {
+            width: 25px;
+            position: absolute;
+            right: 54px;
+            margin-top: -44px;
+            cursor: pointer;
+            background: transparent;
+        }
+
+        .container button {
+            width: 100%;
+            height: 45px;
+            font-size: 18px;
+            border: 1px solid #0066E8; /* Facebook Blue */
+            border-radius: 30px;
+            background: #0066E8; /* Facebook Blue */
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .container button:hover {
+            background: transparent;
+            color: #0066E8;
+        }
+         .create-account-btn {
+   width: 90%;
+   padding: 12px;
+   margin-top: 55px;
+   background: transparent;
+   color: #1877f2;
+   border: 1px solid #1877f2;
+   border-radius: 60px;
+   cursor: pointer;
+   font-size: 16px;
+   
+ }
+ 
+        .forgot-password {
+         text-align: center;
+         margin-top: 10px;
+          
+        }
+        .forgot-password a {
+          color: black;
+          font-size: 16px;
+          text-decoration: none;
+          
+        }
+      .meta-logo {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.meta-logo img {
+  width: 50px;
+}
+
+.meta-logo p {
+  margin-top: 20px;
+  font-size: 10px;
+  color: #65676b;
+}
+
+.meta-logo a {
+  text-decoration: none;
+  color: #65676b;
+  margin: 0 5px;
+}
+        .popup-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .popup-container.active {
+            opacity: 1;
+            pointer-events: auto;
+            transition: .4s ease;
+        }
+
+        .popup-container .popup-box {
+            width: 330px;
+            height: 180px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+            padding: 20px;
+            transform: scale(0);
+        }
+
+        .popup-container.active .popup-box {
+            transform: scale(1);
+            transition: .4s ease;
+            transition-delay: .25s;
+        }
+
+        .popup-box h1 {
+            color: #555;
+            text-align: center;
+            font-size: 17px;
+        }
+
+        .popup-box p {
+            color: #333;
+            text-align: center;
+            margin: 12px 0 20px;
+        }
+
+        .popup-container hr {
+            background: rgb(255, 255, 255, .7);
+            margin-top: 10px;
+        }
+
+        .popup-box .close-btn {
+            width: 100%;
+            height: 45px;
+            background: transparent;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #0079FB;
+            border: none;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            .profile-img {
+                width: 50px;
+                height: 50px;
+            }
+
+            .container input, .container button {
+                font-size: 16px;
+            }
+        }

