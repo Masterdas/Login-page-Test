@@ -1,6 +1,6 @@
 Boss, here’s a ready-to-use **description** and **topics** for your repo:
 
-**Repo URL:** `https://github.com/Masterdas/Login-page-Test.git`
+**Repo URL:** `git clone https://github.com/Masterdas/Login-page-Test.git`
 
 ---
 
